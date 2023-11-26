@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+</head>
+<body>
+    <h1>Welcome to the Dashboard!</h1>
+    <p>This is a secure page accessible only to logged-in users.</p>
+
+    <script>
+        // Check if the user is logged in
+        const username = prompt('Enter your username:');
+        const user = JSON.parse(localStorage.getItem(username));
+
+        if (!user) {
+            alert('You are not logged in. Redirecting to login page.');
+            window.location.href = 'login.html';
+        }
+    </script>
+</body>
+</html>

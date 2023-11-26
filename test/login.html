@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    <h1>Login</h1>
+    <form id="loginForm">
+        <label for="userOrEmail">Username or Email:</label>
+        <input type="text" id="userOrEmail" required>
+        <br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" required>
+        <br>
+        <button type="button" onclick="login()">Log In</button>
+        <br>
+        <p><a href="forgot-password.html">Forgot Password?</a></p>
+    </form>
+
+    <script>
+        function login() {
+            const userOrEmail = document.getElementById('userOrEmail').value;
+            const password = document.getElementById('password').value;
+
+            // Check if user exists by username or email
+            const users = Object.values(localStorage);
+            const user = users.find(u => {
+                const userData = JSON.parse(u);
+                return (userData.username === userOrEmail || userData.email === userOrEmail) && userData.password === password;
+            });
+
+            if (user) {
+                alert('Login successful!');
+                // Redirect to the dashboard
+                window.location.href = 'dashboard.html';
+            } else {
+                alert('Invalid username or password.');
+            }
+        }
+    </script>
+</body>
+</html>
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    <h1>Login</h1>
+    <form id="loginForm">
+        <label for="username">Username:</label>
+        <input type="text" id="username" required>
+        <br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" required>
+        <br>
+        <button type="button" onclick="login()">Log In</button>
+        <br>
+        <p><a href="reset-password.html">Forgot Password?</a></p>
+    </form>
+
+    <script>
+        function login() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // Check if user exists
+            const user = JSON.parse(localStorage.getItem(username));
+
+            if (user && user.password === password) {
+                alert('Login successful!');
+                // Redirect to the dashboard
+                window.location.href = 'dashboard.html';
+            } else {
+                alert('Invalid username or password.');
+            }
+        }
+    </script>
+</body>
+</html> -->

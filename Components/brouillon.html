@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inscription</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    form {
+      max-width: 400px;
+      margin: 20px auto;
+    }
+    label, input {
+      display: block;
+      margin-bottom: 10px;
+    }
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+
+  <form id="signupForm" onsubmit="return validateForm()">
+    <label for="username">Nom d'utilisateur:</label>
+    <input type="text" id="username" name="username" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="password">Mot de passe:</label>
+    <input type="password" id="password" name="password" required>
+
+    <label for="confirmPassword">Confirmer le mot de passe:</label>
+    <input type="password" id="confirmPassword" name="confirmPassword" required>
+
+    <input type="submit" value="S'inscrire">
+  </form>
+
+  <script>
+    function validateForm() {
+      var username = document.getElementById('username').value;
+      var email = document.getElementById('email').value;
+      var password = document.getElementById('password').value;
+      var confirmPassword = document.getElementById('confirmPassword').value;
+
+      // Validation simple côté client
+      if (password !== confirmPassword) {
+        alert("Les mots de passe ne correspondent pas");
+        return false;
+      }
+
+      // Vous pouvez ajouter plus de validations ici (par exemple, pour le format de l'email)
+
+      // Envoi du code de validation par email (simulé ici)
+      alert("Un code de validation a été envoyé à votre adresse e-mail.");
+
+      return true; // Soumet le formulaire si toutes les validations sont réussies
+    }
+  </script>
+
+</body>
+</html>
+
+
+
+<!-- ajouter publicitaire -->
+Pour ajouter des publicités à votre site de presse en ligne en utilisant JavaScript, vous pouvez suivre ces étapes générales :
+
+Créer un espace publicitaire dans votre HTML :
+Ajoutez un élément HTML (par exemple, une div) à l'endroit où vous souhaitez afficher la publicité dans votre code HTML. Donnez-lui un identifiant ou une classe pour pouvoir le cibler facilement en JavaScript.
+
+html
+Copy code
+<!-- Exemple d'espace publicitaire dans votre HTML -->
+<div id="zonePublicite">
+    <!-- Le contenu de la publicité peut être inséré ici -->
+</div>
+Charger la publicité en utilisant JavaScript :
+Utilisez JavaScript pour charger la publicité dans cet espace. Vous pouvez le faire en modifiant le contenu de la div en utilisant le DOM (Document Object Model).
+
+javascript
+Copy code
+// Exemple de JavaScript pour charger la publicité
+window.onload = function() {
+    var zonePublicite = document.getElementById('zonePublicite');
+
+    // Remplacez le contenu de la div avec le code de votre publicité
+    zonePublicite.innerHTML = '<img src="chemin/vers/publicite.jpg" alt="Publicité">';
+}
+Intégrer des services publicitaires tiers :
+Vous pouvez également utiliser des services publicitaires tiers tels que Google AdSense, DoubleClick, ou d'autres réseaux publicitaires. Ces services fournissent généralement un code d'intégration que vous pouvez placer dans votre site pour afficher les publicités.
+
+html
+Copy code
+<!-- Exemple d'intégration de Google AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-xxxxxxxxxxxxxxxx"
+     data-ad-slot="1234567890"
+     data-ad-format="auto"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+Assurez-vous de respecter les politiques et conditions d'utilisation des services publicitaires que vous choisissez d'utiliser.
+
+Gérer les emplacements publicitaires :
+Vous pouvez également créer plusieurs emplacements publicitaires sur votre site et gérer leur contenu de manière dynamique en fonction de différents critères (utilisateur, emplacement sur la page, etc.).
+
+N'oubliez pas que l'insertion de publicités sur votre site doit être faite de manière à respecter les règles et réglementations en vigueur, tout en fournissant une expérience utilisateur agréable.
+
+<!-- PAO ISTE  -->
+
+La PAO, ou Publication Assistée par Ordinateur, est un processus utilisant des logiciels informatiques spécifiques pour la création, la conception, la mise en page, et la publication de documents variés, tels que des magazines, des journaux, des brochures, des affiches, etc. Elle combine des éléments graphiques et textuels pour produire des documents imprimés ou numériques de haute qualité. Les tâches effectuées dans le cadre de la PAO varient en fonction du type de projet, mais voici quelques tâches courantes associées à la PAO :
+
+Création et Importation de Contenu :
+
+Texte : Saisir et éditer le texte, choisir les polices, styles, etc.
+Graphiques : Importer des images, illustrations, logos, etc.
+Mise en Page :
+
+Organiser visuellement le contenu sur la page en fonction des besoins du projet.
+Définir les colonnes, les marges, les en-têtes, les pieds de page, etc.
+Gestion des Couleurs :
+
+Choisir la palette de couleurs appropriée pour le projet.
+Assurer la cohérence des couleurs tout au long du document.
+Utilisation de Styles :
+
+Appliquer des styles de paragraphe, de caractère, et des styles prédéfinis pour garantir une uniformité dans la mise en forme.
+Gestion des Pages et des Couches :
+
+Gérer la pagination et l'ordre des pages.
+Utiliser des couches pour organiser différents éléments sur la page.
+Travail avec des Gabarits :
+
+Créer et utiliser des gabarits pour garantir la cohérence dans la mise en page.
+Correction et Révision :
+
+Vérifier l'orthographe, la grammaire et la qualité générale du contenu.
+Effectuer des révisions en collaboration avec les rédacteurs et les responsables du projet.
+Préparation pour l'Impression :
+
+Configurer les paramètres d'impression, comme la résolution, le type de papier, les marges d'impression, etc.
+Vérifier que le document est prêt à être envoyé à l'impression.
+Exportation pour le Numérique :
+
+Préparer des fichiers numériques dans des formats adaptés à la diffusion en ligne, tels que PDF interactifs, eBooks, etc.
+Collaboration avec d'Autres Professionnels :
+
+Travailler en étroite collaboration avec les rédacteurs, les graphistes, les photographes, et d'autres professionnels pour assurer la qualité et la cohérence du projet.
+Les logiciels de PAO populaires incluent Adobe InDesign, QuarkXPress, Scribus, et d'autres. Ces outils offrent des fonctionnalités avancées pour gérer toutes les étapes du processus de publication, du design initial à la production finale.
+
+<!-- <article>
+                        <a href="https://www.facebook.com/profile.php?id=100082365563440" target="_blank"><ion-icon
+                                name="logo-facebook" id="logo-facebook"></ion-icon></a>
+                    </article>
+                    <article>
+                        <ion-icon name="logo-twitter" id="logo-twitter"></ion-icon>
+                    </article>
+                    <article>
+                        <ion-icon name="logo-whatsapp" id="logo-whatsapp"></ion-icon>
+                    </article> -->

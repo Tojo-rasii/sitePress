@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vidéo</title>
+</head>
+<body>
+
+    <h1>Vidéo</h1>
+
+    <div id="videoContainer"></div>
+
+    <script>
+        // Récupérez les paramètres de l'URL
+        const params = new URLSearchParams(window.location.search);
+        const type = params.get('type');
+        const description = params.get('description');
+        const publishDate = params.get('publishDate');
+        const videoUrl = params.get('videoUrl');
+        const imageUrl = params.get('imageUrl');
+
+        // Utilisez les informations pour afficher la vidéo sur la nouvelle page
+        const videoContainer = document.getElementById('videoContainer');
+
+        // Créez un nouvel élément div pour la vidéo
+        const divElement = document.createElement('div');
+
+        // Structure HTML de la vidéo
+        divElement.innerHTML = `
+            <article>
+                <picture>
+                    <ion-icon name="play-circle" id="play-circle"></ion-icon>
+                    <video poster="${imageUrl}" controls>
+                        <source src="${videoUrl}" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </picture>
+            </article>
+            <article>
+                <span>${type}</span>
+                <span>${description}</span>
+                <span>Publié le ${publishDate}</span>
+            </article>
+        `;
+
+        // Ajoutez le nouvel élément div à la page
+        videoContainer.appendChild(divElement);
+    </script>
+
+</body>
+</html>

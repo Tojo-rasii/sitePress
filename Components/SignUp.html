@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S'inscrire</title>
+    <link rel="stylesheet" href="../Styles/SignUp.css">
+</head>
+
+<body>
+    <header class="Navbar">
+        <!-- NAV1 -->
+        <div>
+            <nav>
+                <section>
+                    <p><ion-icon name="calendar" id="calendar"></ion-icon></p>
+                    <p>Samedi,<br> <span style="font-weight: bold;">17 - 08 - 2024</span></p>
+                </section>
+                <section>
+                    <article>
+                        <a href="../Components/About.html"><p>Apropos</p></a>
+                    </article>
+                    |
+                    <article>
+                        <a href="../Components/Mot_Questeur.html"><p>Mot du questeur</p></a>
+                    </article>
+                    |
+                    <article>
+                        <a href="../Components/Mini_Biographie.html"><p>Mini biographie</p></a>
+                    </article>
+                </section>
+                <section>
+                    <button>Contactez-nous</button>
+                </section>
+            </nav>
+        </div>
+        <!-- NAV2 -->
+        <div>
+            <nav>
+                <section>
+                    <article>
+                        <picture>
+                            <img src="../tools/images/logo.jpg" alt="logo" id="logo">
+                        </picture>
+                    </article>
+                    <article>
+                        <h2 id="Title">COSEF</h2>
+                    </article>
+                </section>
+                <section>
+                    <article>
+                        <a href="../index.html">
+                            <p>Actualite</p>
+                        </a>
+                    </article>
+                    <article>
+                        <a href="../Components/AlaUne.html">
+                            <p>A la une</p>
+                        </a>
+                    </article>
+                    <article>
+                        <a href="../Components/Page_Politique.html">
+                            <p>Politique</p>
+                        </a>
+                    </article>
+                    <article>
+                        <a href="../Components/Page_Sport.html">
+                            <p>Sport</p>
+                        </a>
+                    </article>
+                    <article>
+                        <a href="../Components/Page_Social.html">
+                            <p>Social</p>
+                        </a>
+                    </article>
+                    <article>
+                        <a href="../Components/Page_Culturel.html">
+                            <p>Culturel</p>
+                        </a>
+                    </article>
+                </section>
+                <section>
+                    <article class="Article-search">
+                        <a href="../search.html"><ion-icon name="search" id="search-logo"></ion-icon></a>
+                    </article>
+                    <article>
+                        <p id="profile"><ion-icon name="contact" id="logo-profile"></ion-icon></p>
+                        <p id="close"><ion-icon name="close-circle" id="logo-close"></ion-icon></p>
+                    </article>
+                    <!--POPUP -->
+                    <div class="Pop-Log">
+                        <a href="../Components/Login.html">
+                            <section>
+                                <article><ion-icon name="log-in" id="logo-login"></ion-icon></article>
+                                <article>Se Connecter</article>
+                            </section>
+                        </a>
+                    </div>
+                </section>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-sign">
+        <div>
+            <img src="../tools/images/pablita.png" alt="">
+        </div>
+        <div>
+            <form action="http://localhost:3000/users" method="post">
+                <article>
+                    <p>Sign up</p>
+                    <p>Creer votre propre compte</p>
+                </article>
+                <article>
+                    <span>
+                        <ion-icon name="person" id="person"></ion-icon>
+                        <input type="text" name="nom" placeholder="Nom d'utilisateur">
+                    </span>
+                </article>
+                <article>
+                    <span>
+                        <ion-icon name="mail" id="person"></ion-icon>
+                        <input type="text" name="email" placeholder="Email">
+                    </span>
+                </article>
+                <article>
+                    <span>
+                        <ion-icon name="unlock" id="password"></ion-icon>
+                        <input type="password" name="password" placeholder="Mot de passe">
+                    </span>
+                </article>
+                <article>
+                    <span>
+                        <ion-icon name="lock" id="password"></ion-icon>
+                        <input type="password" name="confirmPassword" placeholder="Confirmer le mot de passe">
+                    </span>
+                </article>
+                <article>
+                    <label for="remember"><input type="checkbox" name="remember" id="remember">Accepte Conditions et Politique de confidentialité</label>
+                </article>
+                <article>
+                    <input type="submit" value="S'inscrire">
+                </article>
+                <article>
+                    <p>Deja inscrit ? <a href="../Components/Login.html
+                        ">Connectez-vous ici.</a></p>
+                </article>
+            </form>
+        </div>
+    </main>
+    <script src="../Context/script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
+</body>
+
+</html>

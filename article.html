@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article</title>
+    <link rel="stylesheet" href="Styles/Styles.css">
+</head>
+<body>
+<!-- NAVBAR -->
+<header class="Navbar">
+    <!-- NAV1 -->
+    <div>
+        <nav>
+            <section>
+                <p><ion-icon name="calendar" id="calendar"></ion-icon></p>
+                <p>Samedi,<br> <span style="font-weight: bold;">17 - 08 - 2024</span></p>
+            </section>
+            <section>
+                <article>
+                    <a href="../Site-PressNews/Components/About.html"><p>Apropos</p></a>
+                </article>
+                |
+                <article>
+                    <a href="../Site-PressNews/Components/Mot_Questeur.html"><p>Mot du questeur</p></a>
+                </article>
+                |
+                <article>
+                    <a href="../Site-PressNews/Components/Mini_Biographie.html"><p>Mini biographie</p></a>
+                </article>
+            </section>
+            <section>
+                <a href="../Site-PressNews/Components/Contact.html"><button>Contactez-nous</button></a>
+            </section>
+        </nav>
+    </div>
+    <!-- NAV2 -->
+    <div>
+        <nav>
+            <section>
+                <article>
+                    <picture>
+                        <img src="../Site-PressNews/tools/images/logo.jpg" alt="logo" id="logo">
+                    </picture>
+                </article>
+                <article>
+                    <h2 id="Title">COSEF</h2>
+                </article>
+            </section>
+            <section>
+                <article>
+                    <a href="index.html">
+                        <p>Actualite</p>
+                    </a>
+                </article>
+                <article>
+                    <a href="../Site-PressNews/Components/AlaUne.html">
+                        <p>A la une</p>
+                    </a>
+                </article>
+                <article>
+                    <a href="../Site-PressNews/Components/Page_Politique.html">
+                        <p>Politique</p>
+                    </a>
+                </article>
+                <article>
+                    <a href="../Site-PressNews/Components/Page_Sport.html">
+                        <p>Sport</p>
+                    </a>
+                </article>
+                <article>
+                    <a href="../Site-PressNews/Components/Page_Social.html">
+                        <p>Social</p>
+                    </a>
+                </article>
+                <article>
+                    <a href="../Site-PressNews/Components/Page_Culturel.html">
+                        <p>Culturel</p>
+                    </a>
+                </article>
+            </section>
+            <section>
+                <article class="Article-search">
+                    <a href="search.html"><ion-icon name="search" id="search-logo"></ion-icon></a>
+                </article>
+                <article>
+                    <p id="profile"><ion-icon name="contact" id="logo-profile"></ion-icon></p>
+                    <p id="close"><ion-icon name="close-circle" id="logo-close"></ion-icon></p>
+                </article>
+                <!--POPUP -->
+                <div class="Pop-Log">
+                    <a href="../Site-PressNews/Components/Login.html">
+                        <section>
+                            <article><ion-icon name="log-in" id="logo-login"></ion-icon></article>
+                            <article>Se Connecter</article>
+                        </section>
+                    </a>
+                </div>
+            </section>
+        </nav>
+    </div>
+</header>
+   <!-- body -->
+   <figure class="Breadcrumb">
+    <div class="titleClick">
+        <p><a href="../Site-PressNews/index.html"><ion-icon name="arrow-back"></ion-icon></a></p>&nbsp;<p>Actualite <strong id="articleType"></strong></p>
+    </div>
+</figure>
+    <main class="Main-body">
+        <section class="Article-Photo">
+            <!-- POLITIQUE -->
+            <div id="articleContainer">
+            </div>
+            <!-- SOCIAL -->
+        </section>
+        <section class="Article-Video">
+            <div id="newsVideo"></div>
+        </section>
+    </main>
+<script src="../Site-PressNews/Context/CliqueArticle.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
+</body>
+</html>

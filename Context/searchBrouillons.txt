@@ -1,0 +1,32 @@
+//  FOREACH BOUCLE // POLITIQUE PHOTOS
+const newsData = [
+    {
+        type: "Politique",
+        imageUrl: "../Site-PressNews/tools/images/cosef.jpg",
+        title: "Title news 1",
+        description: "Description for news 1...",
+        publishDate: "01/01/2023",
+    },
+    {
+        type: "sport",
+        imageUrl: "../Site-PressNews/tools/images/cosef.jpg",
+        title: "Title news 2",
+        description: "Description for news 2...",
+        publishDate: "02/01/2023",
+    },
+    {
+        type: "culturel",
+        imageUrl: "../Site-PressNews/tools/images/cosef.jpg",
+        title: "Title news 3",
+        description: "Description for news 2...",
+        publishDate: "02/01/2023",
+    },
+    {
+        type: "social",
+        imageUrl: "../Site-PressNews/tools/images/cosef.jpg",
+        title: "Title news 4",
+        description: "Description for news 2...",
+        publishDate: "02/01/2023",
+    }
+    // Ajoutez d'autres articles au besoin
+];
